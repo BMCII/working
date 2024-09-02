@@ -54,14 +54,14 @@ brail_to_alphabet={
 }
 
 
-#function to translate english to brail
+#make function to translate english to brail
 def english_to_brail(text):
     brail = ''
     for letter in text.lower():
         brail += alphabet_to_brail[letter]
     return brail
 
-#function to translate brail to english
+#make function to translate brail to english
 def brail_to_english(input):
     text = ''
     character = wrap(input, 6) #separate input into sections of 6
@@ -69,11 +69,11 @@ def brail_to_english(input):
         text += brail_to_alphabet[i]
     return text
 
-#function to choose how to translate
+#make function to choose how to translate
 def translate(input):
     if all(char in '0.' for char in input):
         print(brail_to_english(input))
     else:
         print(english_to_brail(input))
 
-translate(' ')
+translate('outllo')
